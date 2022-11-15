@@ -1,3 +1,6 @@
+NODE VERSION v18.12.1
+NPM VERSION 9.1.1
+
 # UsersList
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.2.9.

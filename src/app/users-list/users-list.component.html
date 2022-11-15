@@ -1,0 +1,78 @@
+<!--search element-->
+<div class="row">
+    <form class="col s12">
+      <div class="row">
+        <div class="input-field col s12">
+          <i class="material-icons prefix">search</i>
+          <input #buscaDescricao id="icon_prefix" type="text" class="validate" [value]="valueToFilter" (input)="valueToFilter = buscaDescricao.value" (keyup)="filter(valueToFilter)">
+          <label for="icon_prefix">Search</label>
+        </div>
+      </div>
+    </form>
+  </div>
+  
+  <!--table-->
+  <table class="highlight userList table-sortable">
+    <thead class="center">
+      <tr>
+        <th><a (click)="order('id')">ID</a></th>
+        <th><a (click)="order('name')">Name</a></th>
+        <th><a (click)="order('age')">Age</a></th>
+        <th><a (click)="order('city')">City</a></th>
+        <th>Delete</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let user of filteredUsers">
+          <td>{{user.id}}</td>
+          <td>{{user.name}}</td>
+          <td>{{user.age}}</td>
+          <td>{{user.city}}</td>
+          <td>
+            <a class="btn-floating btn-medium waves-effect waves-light red left" (click)="openDeleteModal(user.name)">
+              <i class="material-icons">delete</i>
+              Delete
+            </a>
+          </td>
+      </tr>
+    </tbody>
+  </table>
+  
+  <!--cards-->
+  <div class="cards">
+    <div class="orderingBtns">
+      <a class="waves-effect btn white-text red lighten-3" (click)="order('id')">ID</a>
+      <a class="waves-effect btn white-text red lighten-3" (click)="order('name')">Name</a>
+      <a class="waves-effect btn white-text red lighten-3" (click)="order('age')">Age</a>
+      <a class="waves-effect btn white-text red lighten-3" (click)="order('city')">City</a>
+    </div>
+  
+    <div *ngFor="let user of filteredUsers" class="row">
+      <div  class="col s12 m12">
+        <div class="card big pink lighten-5">
+          <div class="card-content">
+            <span class="card-title">{{user.id}}. {{user.name}}</span>
+          </div>
+          <div class="card-action">
+            <span class="card-propertie"><strong>Age </strong>{{user.age}}</span>
+            <span class="card-propertie"><strong>City </strong>{{user.city}}</span>
+            <a class="btn-floating btn-medium waves-effect waves-light red right" (click)="openDeleteModal(user.name)"><i class="material-icons">delete</i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+   
+  <!--delete modal-->
+  <div id="modal1" class="modal" materialize="modal" [materializeParams]="[{dismissible: false}]" [materializeActions]="modalActions">
+    <div class="modal-content">
+      <h4>{{currentUserName}} is being removed...</h4>
+       <blockquote>
+        <p>Sorry. The feature of users deletion don't was implemented yet.</p>
+        <p>Please, look for the system administrator to know more about this.</p>
+       </blockquote>
+    </div>
+    <div class="modal-footer">
+      <a class="waves-effect waves-green btn-flat" (click)="closeDeleteModal()">Understood!</a>
+    </div>
+  </div>

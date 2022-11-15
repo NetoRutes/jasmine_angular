@@ -28,9 +28,14 @@
               "src/assets"
             ],
             "styles": [
+              "/home/wellington-rutes/projects/front/test/users-list/node_modules/materialize-css/dist/css/materialize.css",
               "src/styles.scss"
             ],
-            "scripts": []
+            "scripts": [
+              "/home/wellington-rutes/projects/front/test/users-list/node_modules/jquery/dist/jquery.js",
+              "/home/wellington-rutes/projects/front/test/users-list/node_modules/hammerjs/hammer.js",
+              "/home/wellington-rutes/projects/front/test/users-list/node_modules/materialize-css/dist/js/materialize.js"
+            ]
           },
           "configurations": {
             "production": {
@@ -96,9 +101,14 @@
               "src/assets"
             ],
             "styles": [
+              "/home/wellington-rutes/projects/front/test/users-list/node_modules/materialize-css/dist/css/materialize.css",
               "src/styles.scss"
             ],
-            "scripts": []
+            "scripts": [
+              "/home/wellington-rutes/projects/front/test/users-list/node_modules/jquery/dist/jquery.js",
+              "/home/wellington-rutes/projects/front/test/users-list/node_modules/hammerjs/hammer.js",
+              "/home/wellington-rutes/projects/front/test/users-list/node_modules/materialize-css/dist/js/materialize.js"
+            ]
           }
         }
       }

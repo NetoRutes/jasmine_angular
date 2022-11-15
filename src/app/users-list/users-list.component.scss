@@ -1,0 +1,78 @@
+$max-break: 800px;
+$min-break: 0px;
+
+table{
+  @media screen and (min-width: $min-break){
+    display:none
+  }
+      
+  @media screen and (min-width: $max-break){
+    display:table
+  }
+}
+
+.cards{
+  @media screen and (min-width: $max-break){
+    display:none
+  }
+      
+  @media screen and (max-width: $max-break){
+    display:block
+  }
+  
+  @media screen and (max-width: 382px){
+    .btn{
+      padding: 0 20px;
+    }
+  }
+
+  @media screen and (max-width: 284px){
+    .btn{
+      margin: 8px;
+    }
+  }
+
+}
+
+.card-title{
+  color: darkred
+}
+
+.card-content{
+  width:90%;
+}
+
+.card-propertie{
+  float: left;
+  width: 32%;
+  text-align: center;
+}
+
+.card{
+  height: 158px;
+  .card-content{
+    width: 100%;
+  }
+  .card-action{
+    height: 70px;
+    background-color: #ef9a9a;
+  }
+}
+
+a{
+  color: black;
+  cursor: pointer;
+}
+
+a:hover{
+  color: #ef9a9a;
+}
+
+.row{
+  margin-bottom: 0px;
+  margin-top: 3px;
+}
+
+.orderingBtns{
+  text-align: center;
+}
